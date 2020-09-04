@@ -7,11 +7,10 @@ use googlogmob\YClientsSDK\Requests\Traits\Paginated;
 
 class Services extends Request
 {
-    use Company,
-        Paginated;
+    use Company;
 
     protected function request()
     {
-        return $this->paginateRequest("services/{$this->company_id}");
+        return $this->requestApi("services/{$this->company_id}");
     }
 }
